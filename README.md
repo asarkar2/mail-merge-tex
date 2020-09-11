@@ -15,3 +15,5 @@ as follows:
 ## Compilation:
 
     mail-merge-tex.py template1.tex candidates.csv -o "<ApplicationID>_<Firstname>_<Lastname>.pdf"
+    
+where `<ApplicationID>`, `<Firstname>`, and `<Lastname>` are csv headers. Do not forget to enclose the output with quotes.
