@@ -1,0 +1,8 @@
+Sl,Date,LastPaymentDate,InstituteJoinDate,SessionStartDate,ApplicationID,Firstname,Lastname,Degree,BranchShortName,BranchLongName,FeeWithoutHostelInNumbers,FeeWithoutHostelInWords,FeeWithHostelInNumbers,FeeWithHostelInWords
+1,9 July 2018,24 July 2018,4th August 2018,6th August 2018,PG89IUI,ANSHUL,PANDEY,M. Sc.,Physics,Physics,"yy,yyy/-",In Words for M. Sc. without Hostel,"zz,zzz/-",In Words for M. Sc. with Hostel
+2,9 July 2018,24 July 2018,4th August 2018,6th August 2018,PGBUO93,VIDYA,JAIN,M. Sc.,Mathematics,Mathematics,"yy,yyy/-",In Words for M. Sc. without Hostel,"zz,zzz/-",In Words for M. Sc. with Hostel
+3,9 July 2018,24 July 2018,4th August 2018,6th August 2018,PGT67JOP,BIDYUT,YADAV,M. Tech.,CSE,Computer Science Engineering,"yyy,yyy/-",In Words for M. Tech. without Hostel,"zzz,zzz/-",In Words for M. Tech. With Hostel
+4,9 July 2018,24 July 2018,4th August 2018,6th August 2018,PG3HJ94,MANAN,PILLAI,M. Tech.,ECE,Electronics and Communication Engineering,"yyy,yyy/-",In Words for M. Tech. without Hostel,"zzz,zzz/-",In Words for M. Tech. With Hostel
+5,9 July 2018,24 July 2018,4th August 2018,6th August 2018,PGYU7K4,AKASH,SHARMA,M. S.,CSE,Computer Science Engineering,"yyy,yyy/-",In Words for M. Tech. without Hostel,"zzz,zzz/-",In Words for M. Tech. With Hostel
+6,9 July 2018,24 July 2018,4th August 2018,6th August 2018,PG3HJ92,NITESH,RAI,M. S.,ECE,Electronics and Communication Engineering,"yyy,yyy/-",In Words for M. Tech. without Hostel,"zzz,zzz/-",In Words for M. Tech. With Hostel
+7,9 July 2018,24 July 2018,4th August 2018,6th August 2018,PGYU8P8,DEEPAK,,M. S.,CCE,Communication and Computer Engineering,"yyy,yyy/-",In Words for M. Tech. without Hostel,"zzz,zzz/-",In Words for M. Tech. With Hostel

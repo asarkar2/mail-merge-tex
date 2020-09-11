@@ -1,0 +1,195 @@
+%! TeX program = xelatex
+\documentclass[12pt]{article}
+
+%\usepackage[a4paper,includeheadfoot,margin=2.54cm]{geometry}
+%\usepackage[%showframe,
+%    paper=a4paper,margin=2.54cm]{geometry}
+\usepackage{geometry}    
+%\usepackage{layout}
+\usepackage{graphicx}
+\usepackage[usenames,dvipsnames]{color}
+%\usepackage{amsmath,amssymb}
+\usepackage{tabularx}
+\usepackage{pstricks}
+\usepackage{fontspec}
+\usepackage{fancyhdr}
+% \usepackage{lastpage}
+% \usepackage{array}
+% \usepackage{textpos}
+%\usepackage{blindtext}
+% \usepackage{lipsum}
+\usepackage{url}
+%\usepackage{hyperref}
+
+\graphicspath{{./figures/}}
+
+\geometry{
+    paper=a4paper,
+    top=3.5cm,headheight=2cm,
+    right=2cm,left=2cm,
+    bottom=2.5cm,
+    footskip=0.2cm
+}
+
+%% Set font. Requires fontspec package.
+%% Have to compile with xelatex.
+\setmainfont{Cambria}
+\setsansfont[Scale=MatchLowercase]{Calibri}
+
+% Table configuration
+\setlength{\arraycolsep}{2pt}
+\setlength{\extrarowheight}{1.5mm}
+% \renewcommand{\arraystretch}{1.5}
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+\newcolumntype{J}{X}
+\newcommand{\breaktext}[2][c]{%
+    \begin{tabular}[#1]{@{}c@{}}#2\end{tabular}}
+
+
+\fancypagestyle{letterfirstpage}
+{   
+%    \setlength{\footskip}{0.5cm}
+    \newgeometry{%paper=a4paper,
+        top=3.5cm,headheight=2cm,
+        right=2cm,left=2cm,
+        bottom=2.5cm,
+        footskip=0.2cm}
+    \rhead{\includegraphics[width=0.22\textwidth]{logo1}}
+    \cfoot{\rule{\textwidth}{0.4pt} 
+    {\small \textbf{Campus:} Institute Campus, Post - PostOffice,
+    District, City - PIN, State, Country\\
+    \textbf{Tel.:} xxxx - xxx - xxx (Toll Free),
+    \textbf{E-mail:} \texttt{email@your.institute.in}, \\
+    \textbf{Web:} \url{https://www.institute.ac.in/}
+    }}
+}
+
+\fancypagestyle{letter}
+{   
+    \restoregeometry
+    \cfoot{
+    \rule{\textwidth}{0.4pt} 
+    {\small \textbf{Campus:} Institute Campus, Post - PostOffice,
+    District, City - PIN, State, Country\\
+    \textbf{Tel.:} xxxx - xxx - xxx (Toll Free),
+    \textbf{E-mail:} \texttt{email@your.institute.in}, \\
+    \textbf{Web:} \url{https://www.institute.ac.in/}
+    }} 
+}
+
+% Pagestyle: fancy
+\renewcommand{\headrulewidth}{0pt}
+%\cfoot{\thepage/\pageref*{LastPage}}
+\cfoot{Page \thepage{} of \pageref*{LastPage}}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1em}
+
+
+
+\begin{document}
+
+%\newpage
+%\setcounter{page}{1}
+
+%%\begin{titlepage}
+%\newgeometry{top=5cm,bottom=2.5cm,right=2cm,left=2cm}
+%\fancyhfoffset[E,0]{0pt}
+
+\thispagestyle{letterfirstpage}
+%\thispagestyle{firststyle}
+%\layout
+%\begin{textblock*}{\paperwidth}[0.125,0](0mm,\textheight)%
+%\includegraphics[width=\paperwidth]{lh_bottom}%
+%\end{textblock*}
+
+\pagestyle{letter}
+
+
+{~\hfill \textbf{Date:} <Date>} \\[0.5cm]
+\textbf{Subject:} Offer letter for Admissions
+
+%\hspace{0.5cm}
+
+Dear \textbf{<Firstname> <Lastname>},\\
+(Application ID: \textbf{<ApplicationID>})
+
+Congratulations! We are pleased to inform you that based on your 
+written test and/or interview you have been allotted a confirmed seat 
+for \textbf{<Degree>} in \textbf{<BranchLongName>} at The Institute 
+of Something.
+
+The admission fee payable for the first semester is:
+
+\begin{center}
+\begin{tabularx}{\textwidth}{|C|C|}
+\hline 
+\textbf{Without Hostel (In Rupees)} & \textbf{With Hostel (In Rupees)} 
+\\ \hline
+<FeeWithoutHostelInNumbers> (<FeeWithoutHostelInWords>) &
+<FeeWithHostelInNumbers> (<FeeWithHostelInWords>) \\
+\hline
+\end{tabularx}
+\end{center}
+
+The admission fee must be deposited by \textbf{<LastPaymentDate>}. To 
+accept the confirmed seat and pay the admission fee, log on to the portal
+portal (\url{https://your/portal/url/here/}). In case the admission 
+fee is not received by the due date, your admission offer is liable to 
+be canceled.
+
+You are required to report and join the Institute on 
+\textbf{<InstituteJoinDate>}. Regular academic session will commence on 
+\textbf{<SessionStartDate>}. You will need to get your documents 
+re-verified on the day of reporting. Till then your admission will 
+remain provisional. If at any stage during your stay in the Institute, 
+it is found that the information provided by you is misleading or 
+wrong, your admission is liable to be canceled.
+
+This is a ragging free Institute and there is no gender discrimination.
+
+Once again, we congratulate you and look forward to your participation 
+in the vibrant intellectual environment of the Institute.
+
+%\lipsum[1-4]
+
+\rput[B](0.4\paperwidth,-0.07\paperheight){%
+\includegraphics[scale=0.22]{stamp1}%
+}
+
+\begin{center}
+\begin{tabularx}{\textwidth}{CC}
+%% Dimension of the signature files has to be same. 
+\includegraphics[scale=0.22]{signature1} &
+\includegraphics[scale=0.22]{signature2} \\
+%\includegraphics[scale=0.22]{blank_sign} &
+%\includegraphics[scale=0.22]{blank_sign} \\
+\textbf{Official 1} & \textbf{Official 2} \\
+\textbf{(Designation of Official 1)} 
+& \textbf{(Designation of Official 2)}
+\end{tabularx}
+\end{center}
+%
+\vspace{-1em}
+\textbf{Attachments:} \vspace{-1em}
+\begin{enumerate}
+\setlength{\itemsep}{0pt}
+\item Payment procedure
+\item Refund policy
+\end{enumerate}
+%
+
+\vfill
+{\centering \textbf{\small Note: All the legal matters will be subject 
+to jurisdiction of courts in Institute city only.}\par} 
+
+%\end{titlepage}
+
+%\restoregeometry
+%\newpage
+%\lipsum[1-10]
+
+
+\end{document}
