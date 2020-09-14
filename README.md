@@ -7,10 +7,10 @@ Python script to create multiple PDF files from a single template.tex and a csv 
 Choice of compiler can be changed by changing the 1st line of the tex file
 as follows:
 
+    %! TeX program = xelatex   %% This is recommended. Otherwise the angle brackets, don't look good.
     %! TeX program = pdflatex
     %! TeX program = latex+dvipdf
     %! TeX program = latex+dvips+ps2pdf
-    %! TeX program = xelatex
 
 ## Compilation:
 
