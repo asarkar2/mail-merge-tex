@@ -124,10 +124,12 @@ def set_tex_program(rttex,txprog):
     check_software(progs)
 
     if ( txprog == 'pdflatex' ):
+#         print("pdflatex")
         ltxcmp = ("-pdf -pdflatex=\"pdflatex " + ' '.join(ltxcmp_opts) 
             + " %O %S\"")
 
     elif ( txprog == 'latex+dvipdf' ): 
+#         print("latex+dvipdf")
         ltxcmp = ("-pdfdvi -latex=\"latex " + ' '.join(ltxcmp_opts) 
             + " %O %S\"")
 
@@ -137,10 +139,12 @@ def set_tex_program(rttex,txprog):
 #             + " %O %S\"")
 
     elif ( txprog == 'xelatex' ):
+#         print("xelatex")
         ltxcmp = ("-xelatex -pdflatex=\"xelatex " + ' '.join(ltxcmp_opts) 
             + " %O %S\"")
 
     elif ( txprog == 'latexmk' ):
+#         print("latexmk")
         ltxcmp = ("-pdf " + ' '.join(ltxcmp_opts)) 
 #             + " %O %S")
 
@@ -195,8 +199,8 @@ if __name__ == "__main__" :
     latexmk = 'latexmk'
     dflt_make_opts = '-g -silent' ;
     
-    extensions = (['.aux', '.log', '.out', '.fls', '.synctex.gz',
-             '.fdb_latexmk', '.ps', '.dvi'])
+    extensions = (['.aux', '.log', '.out', '.tex', '.fls', '.synctex.gz',
+                 '.fdb_latexmk', '.ps', '.dvi', '.xdv'])
     texdel = False
 
     csvfile = None
@@ -318,10 +322,7 @@ if __name__ == "__main__" :
         move(src,dest)
 
         # Clean files
-        exts = (['.aux', '.log', '.out', '.tex', '.fls', '.synctex.gz',
-                 '.fdb_latexmk', '.ps', '.dvi'])
-        for ext in exts:
+        for ext in extensions:
             delfile = outfilename + ext
             if exists(delfile):  
                 os.remove(delfile)
-
